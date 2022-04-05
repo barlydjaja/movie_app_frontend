@@ -13,12 +13,14 @@ const MovieForm = () => {
     })
     const onFormSubmit = (e) => {
         e.preventDefault()
+        console.log('e', e)
         setState({
             title: e.target[0].value,
             release_date: e.target[1].value,
             runtime: e.target[2].value,
-            rating: e.target[3].value,
-            description: e.target[4].value,
+            mpaa_rating: e.target[3].value,
+            rating: e.target[4].value,
+            description: e.target[5].value,
         })
     }
 
@@ -62,7 +64,7 @@ const MovieForm = () => {
                 </Col>
             </Form.Group>
 
-            <Form.Group as={Row} className="mb-3" controlId="formReleaseDate">
+            <Form.Group as={Row} className="mb-3" controlId="formRuntime">
                 <Form.Label column sm="3" className={'h6'}>
                     Runtime
                 </Form.Label>
@@ -71,7 +73,7 @@ const MovieForm = () => {
                 </Col>
             </Form.Group>
 
-            <Form.Group as={Row} className="mb-3" controlId="formReleaseDate">
+            <Form.Group as={Row} className="mb-3" controlId="formMPAARating">
                 <Form.Label column sm="3" className={'h6'}>
                     MPAA Rating
                 </Form.Label>
@@ -86,7 +88,7 @@ const MovieForm = () => {
                 </Col>
             </Form.Group>
 
-            <Form.Group as={Row} className="mb-3" controlId="formReleaseDate">
+            <Form.Group as={Row} className="mb-3" controlId="formRating">
                 <Form.Label column sm="3" className={'h6'}>
                     Rating
                 </Form.Label>
@@ -95,7 +97,7 @@ const MovieForm = () => {
                 </Col>
             </Form.Group>
 
-            <Form.Group as={Row} className="mb-3" controlId="formReleaseDate">
+            <Form.Group as={Row} className="mb-3" controlId="formDescription">
                 <Form.Label column sm="3" className={'h6'}>
                     Description
                 </Form.Label>
